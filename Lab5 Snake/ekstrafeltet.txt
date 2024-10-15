@@ -1,0 +1,29 @@
+Make the board size dynamic and create it automatically.
+
+Create the snake automatically at a random point on the left part of the board.
+
+Place a random fruit at a random position where the snake is not.
+
+Make it impossible for the snake to go the opposite direction of where it is currently going.
+And making it possible to execute two moves in quick succession.
+- Checking if the directon is in the opposite of the current direction.
+- Setting a boolean 'move_made' to false, making it impossible to change direction again before the snake has moved.
+- If a direction change is attempted before the snake has moved, this direction is saved in a variable 'next_move'
+  and is used to set the direction in the next gameloop (if the direction is legal)
+This can be tested by turning on info mode and moving in two directions before pressing space.
+
+- Make welcome screen with app.state = 'welcome'
+- Ability to change difficulty by customizing speed and board size on welcome screen with arrow keys.
+  (Bold text on option being changed)
+
+- Make gameover screen with app.state = 'gameover'
+- Make it possible to restart from gameover screen and keep settings while doing so,
+  but still generate new board and snake position. Uses the same funtion as when changing settings (change_settings(app))
+- Make it possible to go back to welcome screen from gaveomver
+
+- Add images for fruit and 3 different types of fruit
+- Make alternating squares have light or dark green, same as google's snake game
+
+- Add highscore in a text file, only 1 score is saved, no leaderboard :(
+
+All images used are under Public Domain licence.
