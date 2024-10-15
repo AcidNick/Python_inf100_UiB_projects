@@ -1,0 +1,5 @@
+data
+datasett
+database
+baser
+syrer
