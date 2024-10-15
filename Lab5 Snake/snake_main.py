@@ -160,7 +160,12 @@ def redraw_all(app, canvas):
 
 import random
 
-fruits = ['apple', 'banana', 'strawberry']
+# fruits = ['apple', 'banana', 'watermelon']
+
+fruits = {'apple':-1,
+          'banana':-2,
+          'watermelon':-3,
+          }
 
 def move_snake(app):
   app.head_pos = get_next_head_position(app.head_pos, app.direction)
@@ -201,8 +206,8 @@ def add_random_fruit(grid):
       if grid[row][col] == 0:
         possible_positions.append((row, col))
   random_row, random_col = random.choice(possible_positions)
-  random_fruit = random.choice(fruits)
-  grid[random_row][random_col] = -1-fruits.index(random_fruit)
+  random_fruit = random.choice(list(fruits.values()))
+  grid[random_row][random_col] = random_fruit
 
 def is_legal_move(pos, board):
   pos_row, pos_col = pos
