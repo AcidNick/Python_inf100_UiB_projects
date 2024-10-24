@@ -2,14 +2,14 @@ def good_style(source_code: str) -> bool:
     lines = source_code.splitlines()
     return all([len(line) <= 79 for line in lines])
 
-# All([]) returnerer True hvis alle elementene i listen er True,
-# eller hvis listen er tom, ellers False.
-# https://www.geeksforgeeks.org/python-all-function/
-
 def good_style_from_file(filename: str) -> bool:
     file = Path(filename).read_text(encoding='utf-8')
     return good_style(file)
 
+
+# All([]) returnerer True hvis alle elementene i listen er True,
+# eller hvis listen er tom, ellers False.
+# https://www.geeksforgeeks.org/python-all-function/
 
 
 def test_good_style():
