@@ -1,3 +1,5 @@
+from pathlib import Path
+
 def get_impact(line: str):
     cols = line.split(';')
     try:
@@ -84,7 +86,6 @@ def test_filter_earthquakes_file():
 
 
 if __name__ == '__main__':
-    from pathlib import Path
     test_get_impact()
     test_filter_earthquakes()
     test_filter_earthquakes_file()

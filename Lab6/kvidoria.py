@@ -1,3 +1,5 @@
+from pathlib import Path
+
 def get_word_count(path:str) -> dict:
     count_dict = {}
     word_list = Path(path).read_text(encoding='utf-8')
@@ -125,7 +127,6 @@ def test_common_words():
 
 
 if __name__ == "__main__":
-    from pathlib import Path
     test_get_word_count()
     test_pop_most_common_word()
     test_n_common_words()

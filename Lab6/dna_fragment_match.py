@@ -1,3 +1,5 @@
+from pathlib import Path
+
 def best_alignment(genome: str, pattern: str) -> int:
     last_difference = alignment_difference(genome, pattern, 0)
     position = 0
@@ -31,5 +33,4 @@ def test_best_alignment_to_file():
     print(' OK')
 
 if __name__ == '__main__':
-    from pathlib import Path
     test_best_alignment_to_file()

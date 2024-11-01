@@ -7,5 +7,6 @@ def display_inventory(inventory: dict) -> str:
     return inventory_str
 
 
-stuff = {"rope": 1, "torch": 6, "gold coin": 42, "dagger": 1, "arrow": 12}
-print(display_inventory(stuff))
+if __name__ == '__main__':
+    stuff = {"rope": 1, "torch": 6, "gold coin": 42, "dagger": 1, "arrow": 12}
+    print(display_inventory(stuff))

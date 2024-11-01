@@ -1,3 +1,5 @@
+from pathlib import Path
+
 def good_style(source_code: str) -> bool:
     lines = source_code.splitlines()
     return all([len(line) <= 79 for line in lines])
@@ -37,6 +39,5 @@ def test_good_style_from_file():
 
 
 if __name__ == '__main__':
-    from pathlib import Path
     test_good_style()
     test_good_style_from_file()
