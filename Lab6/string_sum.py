@@ -1,3 +1,5 @@
+from pathlib import Path
+
 def get_stringsum(s: str) -> int:
     items = s.split(' ')
     summert: int = 0
@@ -31,5 +33,4 @@ def main():
     print(f'Høyeste strengsum er {t}, funnet først på linje {i}: "{r}"')
 
 if __name__ == '__main__':
-    from pathlib import Path
     main()
