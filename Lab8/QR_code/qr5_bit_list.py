@@ -1,3 +1,5 @@
+from qr6_error_correction import generate_error_correction
+
 def string_to_data(content_string:str) -> list:
     result = []
     for char in content_string:
@@ -26,8 +28,6 @@ def pad_bit_list(core_bit_list: list, pad_to_bytes: int) -> None:
         pad_list.extend(pad1 if len(pad_list) // len(pad1) % 2 == 0 else pad2)
     pad_list = pad_list[:pad_length]
     core_bit_list.extend(pad_list)
-
-from qr6_error_correction import generate_error_correction
 
 def string_to_bit_list(content_string: str, qr_layout: dict):
     core_bit_list = get_core_bit_list(content_string)
