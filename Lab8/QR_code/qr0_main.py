@@ -6,10 +6,10 @@ from qr1_draw import display
 from qr3_masking import get_refined_matrix
 
 # from qr4_zigzag import bit_list_to_raw_matrix
-from qr_dummies import bit_list_to_raw_matrix
+from qr4_sigzag import bit_list_to_raw_matrix
 
 # from qr5_bit_list import string_to_bit_list
-from qr_dummies import string_to_bit_list
+from qr5_bit_list import string_to_bit_list
 
 def get_qr_matrix(content_string):
     qr_layout = json.loads(Path('qrv2_layout.json').read_text(encoding='utf-8'))
